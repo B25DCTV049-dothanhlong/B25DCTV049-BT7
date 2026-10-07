@@ -1,0 +1,78 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #1e2230;
+  color: #fff;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 340px;
+  background: #2a2f42;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.title {
+  margin: 0 0 14px;
+  font-size: 18px;
+  text-align: center;
+  color: #aab0c6;
+  font-weight: 600;
+}
+
+.display {
+  background: #151826;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  text-align: right;
+  overflow: hidden;
+}
+.display-expression {
+  min-height: 22px;
+  font-size: 16px;
+  color: #8b92ad;
+  word-break: break-all;
+}
+.display-result {
+  font-size: 36px;
+  font-weight: 700;
+  word-break: break-all;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  height: 58px;
+  border: none;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.05s, filter 0.15s;
+}
+.btn:hover { filter: brightness(1.15); }
+.btn:active { transform: scale(0.95); }
+.btn-wide { grid-column: span 2; }
+
+.btn-gray   { background: #3d4460; }
+.btn-orange { background: #f59e0b; }
+.btn-red    { background: #ef4444; }
+.btn-green  { background: #22c55e; grid-row: span 2; height: auto; }
